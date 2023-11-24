@@ -1,0 +1,12 @@
+{
+  "name": "anwyl-homes",
+  "version": "1.0.0",
+  "description": "Anwyl Homes HubSpot theme",
+  "scripts": {
+    "watch": "tailwindcss -i ./anwyl-homes/css/tailwind/input.css -o ./anwyl-homes/css/tailwind/output.css --watch",
+    "production": "tailwindcss -i ./anwyl-homes/css/tailwind/input.css -o ./anwyl-homes/css/tailwind/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}
