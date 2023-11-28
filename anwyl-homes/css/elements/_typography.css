@@ -1,3 +1,23 @@
+/* Fonts */
+
+@font-face { 
+  font-family: 'Baloo 2'; 
+  src: url('https://25607454.fs1.hubspotusercontent-eu1.net/hubfs/25607454/baloo-2-regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face { 
+  font-family: 'Baloo 2'; 
+  src: url('https://25607454.fs1.hubspotusercontent-eu1.net/hubfs/25607454/baloo-2-semibold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face { 
+  font-family: 'Caveat'; 
+  src: url('https://25607454.fs1.hubspotusercontent-eu1.net/hubfs/25607454/caveat-bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
 /* The overflow-wrap is meant to prevent long/large words from breaking the mobile responsiveness of a page (e.g. horizontal scrolling). It is preferred to reduce font sizes on mobile to address this, with this CSS specifically helping with extreme scenarios where a reduction in font size is not possible. */
 
 body {
