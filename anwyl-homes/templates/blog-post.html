@@ -38,14 +38,6 @@
         </div>
       {% endif %}
     </article>
-    {% if group.allow_comments %}
-      <div class="blog-comments">
-        {% module "blog_comments"
-          path="@hubspot/blog_comments",
-          label="Blog comments"
-        %}
-      </div>
-    {% endif %}
   </div>
 
   {# Recent posts listing #}
