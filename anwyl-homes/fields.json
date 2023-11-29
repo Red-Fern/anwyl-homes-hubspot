@@ -162,42 +162,5 @@
         }
       }
     ]
-  },
-  {
-    "label": "Spacing",
-    "name": "spacing",
-    "type": "group",
-    "children": [
-      {
-        "label": "Vertical spacing",
-        "name": "vertical_spacing",
-        "type": "number",
-        "display": "slider",
-        "max": 500,
-        "min": 0,
-        "suffix": "px",
-        "default": 160
-      },
-      {
-        "label": "Vertical spacing (mobile)",
-        "name": "vertical_spacing_mobile",
-        "type": "number",
-        "display": "slider",
-        "max": 500,
-        "min": 0,
-        "suffix": "px",
-        "default": 48
-      },
-      {
-        "label": "Maximum content width",
-        "name": "maximum_content_width",
-        "type": "number",
-        "display": "slider",
-        "max": 2500,
-        "min": 900,
-        "suffix": "px",
-        "default": 1420
-      }
-    ]
   }
 ]

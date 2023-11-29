@@ -11,30 +11,18 @@
 {###########################################################################}
 
 .content-wrapper {
-  max-width: var(--container-width);
+  padding-left: var(--spacing--xs);
+  padding-right: var(--spacing--xs);
+  max-width: calc(var(--container-width) + var(--spacing--xs) * 2);
 }
 
 .dnd-section,
 .content-wrapper--vertical-spacing {
-  margin: var(--dnd-section-padding) 0;
+  margin: var(--spacing--lg) 0;
 }
 
-.dnd-section > .row-fluid {
-  max-width: var(--container-width);
-}
-
-@media(max-width: 1299px) {
-  .dnd-section,
-  .content-wrapper--vertical-spacing {
-    margin: calc(var(--dnd-section-padding) * 0.75) 0;
-  }
-}
-
-@media(max-width: 991px) {
-  .dnd-section,
-  .content-wrapper--vertical-spacing {
-    margin: var(--dnd-section-padding-mobile) 0;
-  }
+.dnd-section > .row-fluid  {
+  max-width: calc(var(--container-width) + var(--spacing--xs) * 2);
 }
 
 {###########################################################################}

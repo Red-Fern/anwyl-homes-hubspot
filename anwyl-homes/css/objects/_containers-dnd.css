@@ -14,11 +14,5 @@
 }
 
 .dnd-section .dnd-column {
-  padding: 0 1rem;
-}
-
-@media (max-width: 767px) {
-  .dnd-section .dnd-column {
-    padding: 0;
-  }
+  padding: 0 var(--spacing--xs);
 }
