@@ -2,5 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Preflight */
-@import url('./preflight.css');
+@layer base {
+    /* Typography */
+    h1,
+    .h1,
+    h2,
+    .h2 {
+        @apply mb-6 leading-none font-semibold;
+    }
+    h3,
+    .h3,
+    h4,
+    .h4 {
+        @apply mb-4 leading-tight font-normal;
+    }
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply mb-3 leading-normal font-semibold uppercase;
+    }
+    p:first-child {
+        @apply mt-0;
+    }
+    p:last-child {
+        @apply mb-0;
+    }
+    h1 .font-serif, 
+    .h1 .font-serif,
+    h2 .font-serif, 
+    .h2 .font-serif {
+        @apply text-3xl leading-none;
+    }
+
+    /* Elements */
+    b, strong {
+        @apply font-semibold;
+    }
+    ul, 
+    ol {
+        @apply pl-6;
+    }
+}
