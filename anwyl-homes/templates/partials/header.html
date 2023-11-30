@@ -2,246 +2,73 @@
   templateType: global_partial
   label: Website header
 -->
+<header class="relative py-4 | menu:py-0" x-data="menu">
+    <div class="container relative | menu:py-4">
+        <a href="" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center w-[78px] h-[24px] z-20 | menu:w-[150px] menu:h-[46px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="max-h-full" viewBox="0 0 150 46" fill="none">
+                <g clip-path="url(#logo)">
+                    <path fill="#003A5D" d="m32.727 34.133-12.8-32.944C19.562.244 19.174 0 18.037 0h-2.715c-1.15 0-1.485.22-1.89 1.241L.639 34.13c-.118.318-.22.747-.042.997.177.25.618.302.956.302H3.91c2.123 0 2.566-.315 2.911-1.335l2.472-6.712h14.522l2.423 6.718c.341 1.014.788 1.33 2.908 1.33h2.662c.339 0 .779-.053.957-.303.177-.25.075-.682-.04-.994h.003ZM10.88 22.723l4.079-11.096c.746-2.118 1.548-6.31 1.548-6.31h.147s.934 4.552 1.545 6.358l4.026 11.049H10.879ZM40.602 8.3l.01 25.712c0 1.043-.378 1.417-1.433 1.417h-2.235c-1.055 0-1.475-.374-1.475-1.417V6.601m18.397 21.525-.02-20.866c0-1.043.379-1.416 1.433-1.416h2.235c1.055 0 1.433.373 1.433 1.416v21.788c0 1.043-.381 1.417-1.433 1.417M97.567 5.844c.97 0 1.222.416.927 1.374l-6.955 27.041c-.21.959-.716 1.166-1.771 1.166h-2.317c-1.012 0-1.6-.373-1.771-1.124L81.253 17.76a20.873 20.873 0 0 1-.674-4.708h-.296a19.103 19.103 0 0 1-.716 4.669l-4.47 16.541c-.21.959-.716 1.167-1.771 1.167h-2.278c-1.055 0-1.6-.25-1.81-1.124L62.326 7.22c-.296-.958-.085-1.374.927-1.374h2.951c1.223 0 1.686.25 1.897 1.25l3.457 15.542c.085.377.296 2.209.673 5.584h.254c.085-1.916.38-3.79.844-5.584L77.585 7.22c.296-1 .76-1.25 1.896-1.25h2.278c1.18 0 1.686.25 1.896 1.25L87.83 22.64c.506 1.917.802 3.791.884 5.584h.253c.125-1.793.378-3.667.76-5.542l3.371-15.583c.21-1 .674-1.251 1.897-1.251h2.57l.003-.003ZM125.691 5.844c1.012 0 1.222.623.716 1.416l-10.286 16.5v10.249c0 1.043-.378 1.416-1.433 1.416h-2.403c-1.055 0-1.432-.373-1.432-1.416V23.675L100.526 7.26c-.506-.793-.253-1.416.76-1.416h2.951c1.814 0 2.149.084 2.784 1.25l6.533 11.25 6.576-11.25c.631-1.166 1.012-1.25 2.823-1.25h2.741-.003ZM129.887 33.268V7.318c0-1.084.42-1.474 1.475-1.474h2.403c1.055 0 1.433.39 1.433 1.475v26.599"/>
+                    <path fill="#00BBB4" d="M150.347 30.966a.403.403 0 0 0-.578.061c-1.038 1.32-4.949 2.664-7.749 2.664-3.609 0-5.324-.86-6.981-1.69-1.584-.792-3.224-1.614-6.372-1.614-3.875 0-6.382 1.64-9.853 3.908-1.482.972-3.165 2.07-5.199 3.19-1.154.64-5.252 2.84-9.442 4.253-14.073 4.285-25.302.516-27.4-.28-12.103-4.993-19.994-16.106-25.216-23.46-.953-1.34-1.85-2.606-2.672-3.691-2.77-3.661-5.738-7.355-8.9-8.807-3.086-1.423-6.129-.699-9.294 2.212-.006.007-.013.01-.016.016a.443.443 0 0 0-.036.608.401.401 0 0 0 .581.039c1.387-1.283 2.958-1.28 3.652-1.28 2.984 0 6.043 4.353 10.674 10.941 2.143 3.047 4.571 6.5 7.556 10.37 6.218 8.05 13.448 13.306 21.49 15.616.016.006.036.016.052.02 4.933 1.458 9.784 1.955 14.099 1.955 9.07 0 15.768-2.19 15.854-2.219 1.186-.328 2.34-.8 3.451-1.257l.887-.36c3.263-1.31 5.81-2.616 8.055-3.77 3.993-2.049 6.879-3.53 10.904-3.53 1.985 0 3.303.6 4.7 1.234 1.535.699 3.119 1.42 5.663 1.42 3.204 0 9.093-1.846 12.15-5.948a.444.444 0 0 0-.069-.601h.009Z"/>
+                </g>
+                <defs><clipPath id="logo"><path fill="none" d="M.5 0h150v46H.5z"/></clipPath></defs>
+            </svg>
+        </a>
 
-{% macro add_lang_switcher() %}
-  {% if get_asset_version('@hubspot/language_switcher') == 1 %}
-    {% module "language-switcher"
-      path="@hubspot/language_switcher",
-      label="Language switcher",
-      display_mode="localized"
-      styles={
-        "group_button" : {
-          "group_alignment" : {
-            "alignment" : {
-              "horizontal_align" : "RIGHT"
-            }
-          },
-          "group_background" : {
-            "color" : {
-              "color" : "#000000",
-              "opacity" : 0
-            }
-          },
-          "group_border" : {
-            "border" : {
-              "bottom" : {
-                "style" : "none"
-              },
-              "left" : {
-                "style" : "none"
-              },
-              "right" : {
-                "style" : "none"
-              },
-              "top" : {
-                "style" : "none"
-              }
-            }
-          },
-          "group_chevron" : {
-            "color" : {
-              "color" : "#516d8d",
-              "opacity" : 100
-            },
-            "size" : 10,
-            "spacing" : 10
-          },
-          "group_corner" : {
-            "radius" : 0
-          },
-          "group_icon" : {
-            "color" : {
-              "color" : "#516d8d",
-              "opacity" : 100
-            },
-            "size" : 15,
-            "spacing" : 10
-          },
-          "group_spacing" : {
-            "spacing" : {
-              "padding" : {
-                "bottom" : {
-                  "units" : "px",
-                  "value" : 7
-                },
-                "left" : {
-                  "units" : "px",
-                  "value" : 15
-                },
-                "right" : {
-                  "units" : "px",
-                  "value" : 15
-                },
-                "top" : {
-                  "units" : "px",
-                  "value" : 7
-                }
-              }
-            }
-          },
-          "group_text" : {
-            "font" : {
-              "color" : "#516d8d",
-              "size" : 18,
-              "size_unit" : "px"
-            }
-          }
-        },
-        "group_dropdown" : {
-          "group_border" : {
-            "border" : {
-              "bottom" : {
-                "color" : "#000000",
-                "opacity" : 100,
-                "style" : "none",
-                "width" : {
-                  "units" : "px",
-                  "value" : 1
-                }
-              },
-              "left" : {
-                "color" : "#000000",
-                "opacity" : 100,
-                "style" : "none",
-                "width" : {
-                  "units" : "px",
-                  "value" : 1
-                }
-              },
-              "right" : {
-                "color" : "#000000",
-                "opacity" : 100,
-                "style" : "none",
-                "width" : {
-                  "units" : "px",
-                  "value" : 1
-                }
-              },
-              "top" : {
-                "color" : "#000000",
-                "opacity" : 100,
-                "style" : "none",
-                "width" : {
-                  "units" : "px",
-                  "value" : 1
-                }
-              }
-            }
-          },
-          "group_box_shadow" : {
-            "add_box_shadow" : true
-          },
-          "group_hover" : {
-            "group_background" : {
-              "color" : {
-                "color" : "#f8fafc",
-                "opacity" : 100
-              }
-            }
-          },
-          "group_text" : {
-            "font" : {
-              "color" : "#516d8d",
-              "size" : 16,
-              "size_unit" : "px"
-            }
-          }
-        }
-      },
-      add_chevron_down=true,
-      icon_options="icon"
-    %}
-  {% else %}
-    {% module "language-switcher"
-      path="@hubspot/language_switcher",
-      label="Language switcher",
-      display_mode="localized"
-    %}
-    <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
-  {% endif %}
-{% endmacro %}
-<header class="header">
+        <div class="flex items-center justify-between w-full">
+            <a href="#" class="button back alt shrink-0 hidden | menu:inline-flex">[Find your home]</a>
 
-  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+            <span class="hidden menu:inline-block">[ Social links ]</span>
 
-  <a href="#main-content" class="header__skip">Skip to content</a>
+            <button class="ml-auto border-0 bg-transparent text-teal z-20 | menu:hidden" x-on:click="toggle">
+                {# Mobile menu open #}
+                <svg x-show="!menuOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z"></path>
+                </svg>
 
-  {# Top header drag and drop area #}
-
-  {% dnd_area "header-top"
-    label="Top header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
-
-  {# Main header #}
-
-  <div class="header__container content-wrapper">
-
-    {# Header logo column #}
-
-    <div class="header__logo header__logo--main">
-      {% module "site_logo"
-        path="@hubspot/logo"
-        img={
-          "loading": "eager"
-        }
-      %}
+                {# Mobile menu close #}
+                <svg x-cloak x-show="menuOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
     </div>
 
-    {# Header navigation column #}
-
-    <div class="header__column">
-
-      {# Header navigation row one #}
-
-
-
-      <div class="header__row-1">
-        {% if content.translated_content.values()|selectattr("published")|length or is_listing_view and group.translations %}
-          <div class="header__language-switcher header--element">
-            <div class="header__language-switcher--label">
-              {{ add_lang_switcher() }}
-            </div>
-          </div>
-        {% endif %}
-        <div class="header__search header--element">
-          {% module "site_search"
-            path="@hubspot/search_input",
-            label="Search",
-            field_label="Search",
-            placeholder=""
-          %}
-        </div>
-      </div>
-
-      {# Header navigation row two #}
-
-      <div class="header__row-2">
-        <div class="header--toggle header__navigation--toggle"></div>
-        {% if content.translated_content|length or is_listing_view and group.translations %}
-          <div class="header--toggle header__language-switcher--toggle"></div>
-        {% endif %}
-        <div class="header--toggle header__search--toggle"></div>
-        <div class="header__close--toggle"></div>
-        <div class="header__navigation header--element">
-          {% module "navigation-primary"
-            path="../../modules/menu",
-            label="Primary navigation"
-          %}
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  {# Bottom header drag and drop area #}
-
-  {% dnd_area "header-bottom"
-    label="Bottom header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
-
+    {% include "./menu.html" %}
 </header>
+
+{% require_js %}
+  <script type="text/javascript">
+    // Toggle mobile menu
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('menu', () => ({
+        menuOpen: true,
+        init() {
+            this.menuOpen = this.isDesktop();
+    
+            window.addEventListener('resize', () => {
+                this.checkVisible()
+            })
+        },
+        toggle() {
+            if (!this.isDesktop()) {
+                this.menuOpen = !this.menuOpen;
+    
+                document.querySelector('body').classList.toggle('overflow-hidden');
+            }
+        },
+        checkVisible() {
+            if (this.isDesktop()) {
+                return this.menuOpen = true;
+            }
+    
+            this.menuOpen = false;
+    
+            document.querySelector('body').classList.remove('overflow-hidden');
+        },
+        isDesktop() {
+            return window.innerWidth > 1200;
+        }
+      }))
+    })
+  </script>
+{% end_require_js %}

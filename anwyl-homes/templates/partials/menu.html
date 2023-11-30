@@ -1,0 +1,26 @@
+<nav 
+    id="nav-main" 
+    class="absolute top-0 left-0 mt-[56px] pb-[112px] h-screen w-full border-t border-light-stone bg-white z-10 overflow-auto | menu:static menu:mt-0 menu:pb-0 menu:h-auto menu:border-b menu:border-green"
+    x-bind:class="{ 'invisible opacity-0': !menuOpen, 'visible opacity-100': menuOpen }"
+    x-cloak 
+>
+    <div class="menu:container">
+        <div class="px-xs py-4 border-b border-light-stone | menu:hidden">
+            <a href="#" class="button back alt">[Find your home]</a>
+        </div>
+
+        <ul class="menu:flex menu:justify-center">
+            {% for x in range(0,5) %}
+                <li>
+                    <a 
+                        href="#"
+                        class="flex items-center px-5 py-4 border-b border-light-stone px-xs py-4 text-navy font-semibold | menu:px-4 menu:py-7 menu:border-0"
+                        x-on:click="toggle"
+                    >
+                        [Link]
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

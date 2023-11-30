@@ -46,9 +46,16 @@
 }
 
 @layer components {
+    /* Container */
+    .container {
+        @apply mx-auto px-xs;
+        max-width: calc(var(--container-width) + var(--spacing--xs) * 2);
+    }
+
     /* Buttons */
+    /* Images are linked in elements/_buttons.css */
     .button { 
-        @apply relative inline-flex items-center py-1.5 pl-7 pr-2.5 border border-teal rounded-[70px] bg-teal text-white font-semibold transition duration-300;
+        @apply relative inline-flex items-center py-1.5 pl-7 pr-2.5 border border-solid border-teal rounded-[70px] bg-teal text-white font-semibold transition duration-300;
     }
     .button::after {
         @apply content-[''] inline-block shrink-0 ml-4 w-11 h-11 bg-current;
@@ -56,6 +63,12 @@
     .button:hover { 
         border-color: color-mix(in srgb, var(--color--teal), #000 25%);
         background-color: color-mix(in srgb, var(--color--teal), #000 25%);
+    }
+    .button.back {
+        @apply py-1.5 pl-2.5 pr-7;
+    }
+    .button.back::after {
+        @apply order-first ml-0 mr-4 rotate-180;
     }
     .button.alt {
         @apply border-mid-gray bg-white text-teal;
@@ -73,4 +86,15 @@
         @apply bg-transparent;
         color: color-mix(in srgb, var(--color--teal), #000 25%);
     }
+
+    /* Header */
+    nav ul {
+        @apply m-0 p-0 list-none;
+    }
+}
+
+/* Vue and Alpine */
+[v-cloak], 
+[x-cloak] {
+    @apply !hidden;
 }
