@@ -44,3 +44,33 @@
         @apply pl-6;
     }
 }
+
+@layer components {
+    /* Buttons */
+    .button { 
+        @apply relative inline-flex items-center py-1.5 pl-7 pr-2.5 border border-teal rounded-[70px] bg-teal text-white font-semibold transition duration-300;
+    }
+    .button::after {
+        @apply content-[''] inline-block shrink-0 ml-4 w-11 h-11 bg-current;
+    }
+    .button:hover { 
+        border-color: color-mix(in srgb, var(--color--teal), #000 25%);
+        background-color: color-mix(in srgb, var(--color--teal), #000 25%);
+    }
+    .button.alt {
+        @apply border-mid-gray bg-white text-teal;
+    }
+    .button.alt:hover {
+        @apply border-teal bg-teal text-white;
+    }
+    .button.simple {
+        @apply p-0 border-0 bg-transparent text-teal font-normal;
+    }
+    .button.simple::after {
+        @apply -order-1 ml-0 mr-3 w-3.5 h-3.5;
+    }
+    .button.simple:hover {
+        @apply bg-transparent;
+        color: color-mix(in srgb, var(--color--teal), #000 25%);
+    }
+}

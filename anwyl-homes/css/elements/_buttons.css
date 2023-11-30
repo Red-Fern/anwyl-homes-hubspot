@@ -1,19 +1,11 @@
-button,
-.button,
-.hs-button {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.15s linear;
-  white-space: normal;
+.button::after {
+  -webkit-mask: url({{ get_asset_url('/anwyl-homes/images/icons/arrow-right-circle.svg') }}) no-repeat 50% 50%;
+  mask: url({{ get_asset_url('/anwyl-homes/images/icons/arrow-right-circle.svg') }}) no-repeat 50% 50%;
 }
 
-button:disabled,
-.button:disabled,
-.hs-button:disabled {
-  background-color: #D0D0D0;
-  border-color: #D0D0D0;
-  color: #E6E6E6;
+.button.simple::after {
+  -webkit-mask: url({{ get_asset_url('/anwyl-homes/images/icons/arrow-right.svg') }}) no-repeat 50% 50%;
+  mask: url({{ get_asset_url('/anwyl-homes/images/icons/arrow-right.svg') }}) no-repeat 50% 50%;
 }
 
 /* No button */
