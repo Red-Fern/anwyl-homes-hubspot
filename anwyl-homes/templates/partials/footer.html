@@ -2,42 +2,64 @@
   templateType: global_partial
   label: Footer
 -->
-<footer class="footer">
-  {% dnd_area "footer"
-    label="Footer",
-    class="footer__container content-wrapper"
-  %}
+<footer id="footer">
+    <div class="curve-clip relative bg-navy pt-xxs pb-md text-white text-sm">
+        <div class="container">
+            <a href="" class="flex w-[78px] h-[24px] | menu:w-[150px] menu:h-[46px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="max-h-full" viewBox="0 0 150 46" fill="none">
+                    <g clip-path="url(#logo)">
+                        <path fill="#fff" d="m32.227 34.133-12.8-32.944C19.062.244 18.674 0 17.537 0h-2.715c-1.15 0-1.485.22-1.89 1.241L.139 34.13c-.118.318-.22.747-.042.997.177.25.618.302.956.302H3.41c2.123 0 2.566-.315 2.911-1.335l2.472-6.712h14.522l2.423 6.718c.341 1.014.788 1.33 2.908 1.33h2.662c.339 0 .779-.053.957-.303.177-.25.075-.682-.04-.994h.003ZM10.38 22.723l4.079-11.096c.746-2.118 1.548-6.31 1.548-6.31h.147s.934 4.552 1.545 6.358l4.026 11.049H10.379ZM40.104 8.3l.01 25.712c0 1.043-.378 1.417-1.433 1.417h-2.235c-1.055 0-1.475-.374-1.475-1.417V6.601m18.397 21.525-.02-20.866c0-1.043.379-1.416 1.433-1.416h2.235c1.055 0 1.433.373 1.433 1.416v21.788c0 1.043-.381 1.417-1.433 1.417M97.069 5.844c.97 0 1.222.416.927 1.374L91.04 34.259c-.21.959-.716 1.166-1.771 1.166h-2.317c-1.012 0-1.6-.373-1.771-1.124L80.755 17.76a20.867 20.867 0 0 1-.674-4.708h-.296a19.103 19.103 0 0 1-.716 4.669l-4.47 16.541c-.21.959-.716 1.167-1.771 1.167H70.55c-1.055 0-1.6-.25-1.81-1.124L61.828 7.22c-.296-.958-.085-1.374.927-1.374h2.951c1.223 0 1.686.25 1.896 1.25L71.06 22.64c.085.377.296 2.209.674 5.584h.253c.085-1.916.38-3.79.844-5.584L77.087 7.22c.296-1 .76-1.25 1.896-1.25h2.278c1.18 0 1.686.25 1.896 1.25l4.174 15.418c.506 1.917.802 3.791.884 5.584h.253c.125-1.793.378-3.667.76-5.542l3.371-15.583c.21-1 .674-1.251 1.896-1.251h2.57l.004-.003ZM125.191 5.844c1.012 0 1.222.623.716 1.416l-10.286 16.5v10.249c0 1.043-.378 1.416-1.433 1.416h-2.403c-1.055 0-1.432-.373-1.432-1.416V23.675L100.026 7.26c-.506-.793-.253-1.416.76-1.416h2.951c1.814 0 2.149.084 2.784 1.25l6.533 11.25 6.576-11.25c.631-1.166 1.012-1.25 2.823-1.25h2.741-.003ZM129.387 33.268V7.318c0-1.084.42-1.474 1.475-1.474h2.403c1.055 0 1.433.39 1.433 1.475v26.599"/>
+                        <path fill="#00BBB4" d="M149.846 30.965a.405.405 0 0 0-.579.062c-1.038 1.319-4.949 2.664-7.749 2.664-3.609 0-5.324-.861-6.981-1.69-1.584-.792-3.224-1.614-6.372-1.614-3.875 0-6.382 1.64-9.853 3.908-1.482.971-3.165 2.07-5.199 3.19-1.154.64-5.252 2.84-9.442 4.253-14.073 4.285-25.302.516-27.4-.28-12.103-4.993-19.994-16.106-25.216-23.461-.953-1.338-1.85-2.605-2.672-3.69-2.77-3.662-5.738-7.355-8.9-8.807-3.086-1.423-6.129-.699-9.294 2.212-.006.006-.013.01-.016.016a.443.443 0 0 0-.036.608.401.401 0 0 0 .581.039c1.387-1.284 2.958-1.28 3.652-1.28 2.984 0 6.043 4.353 10.674 10.941 2.143 3.047 4.572 6.5 7.556 10.37 6.218 8.05 13.448 13.306 21.49 15.615.016.007.036.017.052.02 4.933 1.459 9.784 1.956 14.1 1.956 9.07 0 15.767-2.19 15.853-2.22 1.186-.327 2.34-.798 3.451-1.256l.887-.361c3.263-1.31 5.81-2.615 8.055-3.768 3.993-2.05 6.879-3.532 10.905-3.532 1.985 0 3.302.601 4.699 1.235 1.535.698 3.119 1.42 5.663 1.42 3.204 0 9.093-1.846 12.15-5.949a.444.444 0 0 0-.069-.6h.01Z"/>
+                    </g>
+                    <defs><clipPath id="logo"><path fill="none" d="M0 0h150v46H0z"/></clipPath></defs>
+                </svg>
+            </a>
 
-    {# Social follow and copyright #}
+            <div class="grid gap-md mt-sm | lg:grid-cols-4">
+                <p>[ Social links ]</p>
 
-    {% dnd_section %}
-      {% dnd_column %}
-        {% dnd_row %}
-          {% dnd_module path="../../modules/social-follow" %}
-            {% module_attribute "social_link" is_json=True %}
-              [
-                {"social_account": "facebook-f"},
-                {"social_account": "linkedin-in"},
-                {"social_account": "twitter"},
-                {"social_account": "instagram"}
-              ]
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row
-          margin={
-            "top": 12,
-            "bottom": 12
-          }
-        %}
-          {% dnd_module
-            path="@hubspot/rich_text",
-            html='<div style="text-align: center; font-size: 0.7rem;"><span>© {{ year }} All rights reserved.</span></div>'
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
+                <div>
+                    <span class="block mb-xs text-base font-semibold">Explore Anwyl</span>
 
-  {% end_dnd_area %}
+                    <nav id="nav-explore" role="navigation">
+                        <ul class="space-y-5">
+                            <li>[ Links ]</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <span class="block mb-xs text-base font-semibold">All about Anwyl</span>
+
+                    <nav id="nav-about" role="navigation">
+                        <ul class="space-y-5">
+                            <li>[ Links ]</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex flex-wrap gap-sm">
+                    <p>[ Logos ]</p>
+
+                    {# {% for logo in options.footer.logos %}
+                        <a href="{{ logo.link }}" target="_blank">
+                            <img src="{{ Image(logo.logo).src }}" class="max-h-[80px] | lg:max-h-[100px]" alt="{{ Image(logo.logo).alt }}">
+                        </a>
+                    {% endfor %} #}
+                </div>
+            </div>
+
+            <div class="mt-md text-xs | lg:mt-xl">
+                <nav id="nav-policy" role="navigation">
+                    <ul class="flex flex-wrap gap-x-6 gap-y-4">
+                      <li>[ Links ]</li>
+                    </ul>
+                </nav>
+
+                <div class="mt-sm">
+                    [ Copyright ]
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
