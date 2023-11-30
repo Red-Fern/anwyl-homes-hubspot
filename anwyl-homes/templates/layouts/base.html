@@ -39,6 +39,15 @@
         {% global_partial path="../partials/footer.html" %}
       {% endblock footer %}
     </div>
+
+    {# Alpine #}
+    {% require_js %}
+      <script type="text/javascript" src="//unpkg.com/alpinejs" defer></script>
+    {% end_require_js %}
+    {# Swiper #}
+    {% require_js %}
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    {% end_require_js %}
     {{ require_js(get_asset_url("../../js/main.js")) }}
     {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
     {{ standard_footer_includes }}
