@@ -24,27 +24,9 @@
   position: relative;
 }
 
-.menu__link {
-  font-size: 0.917rem;
-  line-height: 1.667rem;
-  text-decoration: none;
-}
-
-.menu__link:hover,
-.menu__link:focus,
-.menu__link:active {
-  text-decoration: none;
-}
-
 .menu__link--active-link,
 .menu__link--active-branch {
   font-weight: bold;
-}
-
-@media (min-width: 768px) and (max-width: 1150px) {
-  .menu__link {
-    font-size: 0.833rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -55,7 +37,6 @@
 
   .menu__link {
     display: block;
-    font-size: 1.083rem;
   }
 }
 
@@ -63,8 +44,6 @@
 
 .menu__item--depth-1 {
   display: inline-block;
-  padding: 0.7rem 0.875rem;
-  text-transform: uppercase;
 }
 
 .menu__item--depth-1 > .menu__link--active-link:after {
@@ -77,15 +56,6 @@
 }
 
 @media (max-width: 767px) {
-  .menu__item--depth-1 {
-    border-top: 2px solid #CED4DB;
-    padding: 0;
-  }
-
-  .menu__item--depth-1 > .menu__link {
-    padding: 0.35rem 1.225rem;
-  }
-
   .menu__item--depth-1 > .menu__link--active-link:after {
     content: none;
   }
@@ -121,15 +91,11 @@
 }
 
 .menu__submenu .menu__item {
-  border-bottom: 1px solid #D1D6DC;
-  padding: 0;
   width: 100%;
 }
 
 .menu__submenu .menu__link {
   display: block;
-  padding: 0.7rem 1.05rem;
-  transition: background-color 0.3s;
   width: 100%;
 }
 
@@ -194,32 +160,19 @@
     width: 100%;
   }
 
-  .menu__submenu .menu__item {
-    background-color: #FFF;
-    border-bottom: none;
-    border-top: 2px solid #EBEFF3;
-    padding: 0;
-  }
-
   .menu__submenu .menu__link {
     display: block;
-    padding: 0.7rem 2rem;
     transition: none;
     width: 100%;
   }
 
   .menu__submenu .menu__item .menu__link:hover,
   .menu__submenu .menu__item .menu__link:focus {
-    background-color: inherit;
     transition: none;
   }
 
   .menu__item--has-submenu > .menu__link {
     width: 70%;
-  }
-
-  .menu__submenu--level-3 .menu__item .menu__link {
-    padding: 0.7rem 3rem;
   }
 }
 
@@ -228,7 +181,6 @@
 @media(min-width: 768px) {
   .menu__submenu .menu__child-toggle {
     margin-left: auto;
-    padding: 0 1.05rem;
   }
 
   .menu__child-toggle {

@@ -99,9 +99,31 @@
     #footer a {
         @apply text-white;
     }
-    #footer #nav-explore a,
-    #footer #nav-about a { 
+    #footer .footer-links ul { 
+        @apply space-y-5;
+    }
+    #footer .footer-links li {
+        @apply block;
+    }
+    #footer .footer-links a {
         @apply underline;
+    }
+    #footer .logos img {
+        @apply max-h-[80px] lg:max-h-[100px];
+    }
+    #footer .footer-bottom ul {
+        @apply flex flex-wrap gap-x-6 gap-y-4;
+    }
+
+    /* Modules - Social Follow */
+    .social-links {
+        @apply space-y-5
+    }
+    .social-links__link {
+        @apply flex;
+    }
+    .social-links__icon svg {
+        @apply mr-4 w-5 h-5 fill-current;
     }
 }
 

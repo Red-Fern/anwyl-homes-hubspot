@@ -15,49 +15,55 @@
                 </svg>
             </a>
 
-            <div class="grid gap-md mt-sm | lg:grid-cols-4">
-                <p>[ Social links ]</p>
+            <div class="footer-links grid gap-md mt-sm | lg:grid-cols-4">
+                {% module "footer_social_links"
+                    path="../../modules/social-follow",
+                    label="Social links"
+                %}
 
                 <div>
                     <span class="block mb-xs text-base font-semibold">Explore Anwyl</span>
 
-                    <nav id="nav-explore" role="navigation">
-                        <ul class="space-y-5">
-                            <li>[ Links ]</li>
-                        </ul>
-                    </nav>
+                    {% module "footer_developments_menu"
+                        path="../../modules/menu",
+                        label="Developments menu"
+                    %}
                 </div>
 
                 <div>
                     <span class="block mb-xs text-base font-semibold">All about Anwyl</span>
 
-                    <nav id="nav-about" role="navigation">
-                        <ul class="space-y-5">
-                            <li>[ Links ]</li>
-                        </ul>
-                    </nav>
+                    {% module "footer_about_menu"
+                        path="../../modules/menu",
+                        label="About menu"
+                    %}
                 </div>
 
-                <div class="flex flex-wrap gap-sm">
-                    <p>[ Logos ]</p>
+                <div class="logos flex flex-wrap gap-sm">
+                    {% module "footer_logo_1" 
+                        path="@hubspot/linked_image" 
+                        label="Logo 1"
+                    %}
 
-                    {# {% for logo in options.footer.logos %}
-                        <a href="{{ logo.link }}" target="_blank">
-                            <img src="{{ Image(logo.logo).src }}" class="max-h-[80px] | lg:max-h-[100px]" alt="{{ Image(logo.logo).alt }}">
-                        </a>
-                    {% endfor %} #}
+                    {% module "footer_logo_2" 
+                        path="@hubspot/linked_image" 
+                        label="Logo 2"
+                    %}
                 </div>
             </div>
 
-            <div class="mt-md text-xs | lg:mt-xl">
-                <nav id="nav-policy" role="navigation">
-                    <ul class="flex flex-wrap gap-x-6 gap-y-4">
-                      <li>[ Links ]</li>
-                    </ul>
-                </nav>
+            <div class="footer-bottom mt-md text-xs | lg:mt-xl">
+                {% module "footer_policy_menu"
+                    path="../../modules/menu",
+                    label="Policy menu"
+                %}
 
                 <div class="mt-sm">
-                    [ Copyright ]
+                    {% module "footer_copyright"
+                        path="@hubspot/rich_text",
+                        label="Copyright notice"
+                        html="Anwyl Homes is a trading name of Anwyl Construction Co Ltd (Company Numbers 0435323) a company registered in England. Registered office is at Anwyl House, Clos Dewi Sant, St David’s Park, Ewloe, Flintshire, CH5 3DT number GB159002679."
+                    %}
                 </div>
             </div>
         </div>
